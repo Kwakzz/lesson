@@ -18,7 +18,7 @@ def create(request):
 @api_view(['GET'])
 def get(request, id):
     try:
-        lesson = Lesson.objects.get(id=id)
+        lesson = Lesson.objects.get(lesson_id=id)
     except Lesson.DoesNotExist:
         return Response(status=status.HTTP_404_NOT_FOUND)
     

@@ -19,7 +19,7 @@ from lesson.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('lessons/', create, name='create'),
-    path('lessons/<int:id>/', create, name='get'),
-    path('lessons/', create, name='get_all')
+    path('lesson/create/', create, name='create'),
+    path('lesson/<str:id>/', get, name='get'),
+    path('lesson/', get_all, name='get_all')
 ]
